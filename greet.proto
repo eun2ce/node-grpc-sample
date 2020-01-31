@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+service greet {
+    rpc getList (GreetEmpty) returns (GreetListReply) {}
+    rpc getById (GreetIdOnly) returns (GreetRequest) {}
+    rpc insert (GreetRequest) returns (GreetRequest) {}
+    rpc update (GreetRequest) returns (GreetRequest) {}
+    rpc remove (GreetIdOnly) returns (GreetEmpty) {}
+}
+
+message GreetEmpty {}
+
+message GreetListReply {
+    repeated GreetRequest greets = 1;
+};
+
+message GreetRequest {
+    string id = 1;
+    int32 classify =2;
+    string author = 3;
+    bool isPublic = 4;
+    string title = 5;
+    string url = 6;
+    string content = 7;
+    string cover = 8;
+}
+
+message GreetIdOnly {
+    string id = 1;
+}

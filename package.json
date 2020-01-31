@@ -1,0 +1,16 @@
+{
+  "name": "grpc-node-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eun2ce",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "co": "^4.6.0",
+    "grpc": "^1.24.2"
+  }
+}
